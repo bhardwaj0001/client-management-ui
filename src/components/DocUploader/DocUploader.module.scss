@@ -32,15 +32,18 @@
     top: -8px;
     font-size: 1.4rem;
     font-weight: 700;
-    color: #003d4f; // Elegant blue for labels
+    color: white; // Elegant blue for labels
     cursor: pointer;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s ease;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background-color: #003d4f;
 
     &:hover {
-      color: #003d4f; // Darker blue when hovered
+      opacity: 0.9; // Darker blue when hovered
     }
   }
 
@@ -66,7 +69,8 @@
     text-align: center;
 
     &.success {
-      color: #28a745; // Green for success messages
+      color: #6b9e78;
+      font-weight: bold; // Green for success messages
     }
   }
   .enhancer {
@@ -98,4 +102,18 @@
       -webkit-backdrop-filter: blur(6px);
     }
   }
+}
+.redirectCaseLink {
+  margin-left: 20px;
+  text-decoration: none;
+  margin-top: 2rem;
+  background-color: #f2617a;
+  color: #edf1f3;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.9rem 2.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }

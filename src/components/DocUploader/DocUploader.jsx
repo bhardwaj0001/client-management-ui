@@ -1,11 +1,13 @@
 import { useState } from "react";
 import styles from "./DocUploader.module.scss";
 import { BASE_PATH } from "../../utils";
+import { Link } from "react-router-dom";
 
 export const DocUploader = () => {
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState(null);
+  const [caseId, setCaseId] = useState("");
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files?.[0];
@@ -36,6 +38,7 @@ export const DocUploader = () => {
 
       if (response.ok) {
         setMessage("File uploaded successfully!");
+        setCaseId(response?.body?.caseId ?? response?.caseId);
       } else {
         setMessage("Upload failed. Please try again.");
       }
@@ -67,10 +70,21 @@ export const DocUploader = () => {
           onChange={handleFileChange}
         />
         {file && <p className={styles.fileName}>{file.name}</p>}
-        {message && <p className={styles.message}>{message}</p>}
-        <button onClick={handleUpload} disabled={uploading || !file}>
-          {uploading ? "Uploading..." : "Upload PDF"}
-        </button>
+        {message && (
+          <p className={`${styles.message} ${caseId ? styles.success : ""}`}>
+            {message}
+          </p>
+        )}
+        <div>
+          <button onClick={handleUpload} disabled={uploading || !file}>
+            {uploading ? "Uploading..." : "Upload PDF"}
+          </button>
+          {caseId && (
+            <Link to={`/ops/${caseId}`} className={styles.redirectCaseLink}>
+              View Case
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

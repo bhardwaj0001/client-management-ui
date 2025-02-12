@@ -63,23 +63,6 @@ export const CaseDetailsForm = ({ caseData, isLoading }) => {
           </div>
         </div>
 
-        {/* User Details */}
-        <div className={styles.card}>
-          <h2>🧑‍💼 User Details</h2>
-          <div className={styles.detailsGrid}>
-            <p>
-              <strong>Name:</strong> {caseData.userDetails.name}
-            </p>
-            <p>
-              <strong>Identification:</strong>{" "}
-              {caseData.userDetails.identification}
-            </p>
-            <p>
-              <strong>ID Type:</strong> {caseData.userDetails.idType}
-            </p>
-          </div>
-        </div>
-
         {/* Product Details */}
         <div className={styles.card}>
           <h2>💳 Product Details</h2>
@@ -93,6 +76,23 @@ export const CaseDetailsForm = ({ caseData, isLoading }) => {
             </p>
             <p>
               <strong>Start Date:</strong> {caseData.productDetails.startDate}
+            </p>
+          </div>
+        </div>
+
+        {/* User Details */}
+        <div className={styles.card}>
+          <h2>🧑‍💼 User Details</h2>
+          <div className={styles.detailsGrid}>
+            <p>
+              <strong>Name:</strong> {caseData.userDetails.name}
+            </p>
+            <p>
+              <strong>Identification:</strong>{" "}
+              {caseData.userDetails.identification}
+            </p>
+            <p>
+              <strong>ID Type:</strong> {caseData.userDetails.idType}
             </p>
           </div>
         </div>

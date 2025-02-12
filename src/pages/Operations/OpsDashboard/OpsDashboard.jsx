@@ -62,7 +62,7 @@ export const OpsDashboard = () => {
       <div
         style={{
           background:
-            'url("/tw_illustration_133.jpg") no-repeat center center/cover',
+            'url("/tw_illustration_1.jpg") no-repeat center center/cover',
           height: "100vh",
           backgroundColor: "rgba(0, 0, 0, 0.5)", // Optional fallback color
         }}

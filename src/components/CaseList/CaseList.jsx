@@ -13,12 +13,7 @@ export const CaseList = ({ allCases }) => {
     <div className={styles.container}>
       {/* Left Panel - Names List */}
       <div className={styles.sidebar}>
-        <h2>Cases as PDFs</h2>
-        {/* <ul>
-          {namesList.map((name, index) => (
-            <li key={index}>{name}</li>
-          ))}
-        </ul> */}
+        <h2>Cases Uploaded By Clients as PDFs</h2>
       </div>
 
       {/* Right Panel - Cases Table */}
