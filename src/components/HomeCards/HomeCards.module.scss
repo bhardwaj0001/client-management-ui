@@ -1,0 +1,75 @@
+.cardsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 4rem;
+  flex: 1;
+  background-color: #f6f6f6;
+  gap: 4rem;
+  position: relative;
+  min-height: 600px;
+}
+
+.card {
+  width: 48%;
+  max-width: 340px;
+  height: 420px;
+  background-color: #f6f6f6;
+  color: #212a31;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+
+  img {
+    max-width: -webkit-fill-available;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  &:hover {
+    background-color: #f6f6f6;
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+}
+
+.spinnerCard {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px; /* Adjust size */
+  height: 120px;
+}
+
+.spinerBg {
+  position: absolute;
+}
+
+.cardLink {
+  color: #212a31;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 2px solid #212a31;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #f6f6f6;
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+}

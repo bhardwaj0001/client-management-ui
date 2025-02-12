@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #003d4f;
+  height: 60px;
+  font-weight: 400;
+  .logoLink {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: #003d4f;
+    height: 30px;
+    font-weight: 400;
+
+    text-decoration: none;
+    outline: none;
+
+    &:focus,
+    &:active,
+    &:hover {
+      outline: none;
+      text-decoration: none;
+    }
+  }
+}
+
+.logo {
+  height: 50px; // Adjust size
+}
+
+@keyframes glowEffect {
+  0% {
+    text-shadow: none;
+  }
+  10% {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  }
+  20% {
+    text-shadow: none;
+  }
+}
+
+.teamGnx {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #edf1f3; // Static color
+  display: inline-flex;
+  gap: 4px;
+  font-weight: 400;
+
+  span {
+    animation: glowEffect 3s infinite linear;
+    animation-delay: calc(var(--index) * 4s);
+  }
+}

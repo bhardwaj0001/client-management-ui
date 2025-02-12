@@ -1,0 +1,1 @@
+{"version":3,"file":"getStyles.js","sourceRoot":"","sources":["../../../src/utils/getStyles.ts"],"names":[],"mappings":"AAIA,IAAO,SAAS,GAAG,UAAC,MAA8C,EAAE,OAAiB,EAAE,IAAW,EAAE,KAAa;IAC/G,IAAM,eAAe,GAAG,MAAM,CAAC,OAAO,CAAC,CAAC;IACxC,IAAI,eAAe,EAAE;QACnB,OAAO,eAAe,CAAC,IAAI,EAAE,KAAK,CAAC,CAAC;KACrC;IACD,OAAO,EAAE,CAAC;AACZ,CAAC,CAAC;AAEF,eAAe,SAAS,CAAC"}

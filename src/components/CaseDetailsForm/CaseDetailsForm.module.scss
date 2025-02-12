@@ -1,0 +1,84 @@
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.caseInfo {
+  background: #f8f4e3;
+  border: 2px dotted #000;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.caseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: #edf1f3;
+  border: 1px dotted #003d4f;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.detailsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skeletonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 50px;
+}
+
+.skeletonCaseInfo,
+.skeletonCard {
+  height: 100px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 10px;
+  min-height: 150px;
+}
+
+.skeletonGrid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  display: grid;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

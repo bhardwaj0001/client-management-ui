@@ -1,0 +1,46 @@
+.chartContainer {
+  margin: 5rem 0 6rem 0;
+}
+.treeRoot {
+  font-size: 48px;
+  font-weight: 100;
+  color: #212a31;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.nodeCard {
+  background-color: #2e3944;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  min-height: 20px;
+  max-width: 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nodeCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(11, 9, 9, 0.1);
+}
+
+.children {
+  margin-top: 20px;
+}
+
+.childNode {
+  margin-top: 20px;
+}
+
+.childNode .nodeCard {
+  background-color: #748d92;
+}
+
+.childNode .nodeCard:hover {
+  background-color: #124e66;
+}

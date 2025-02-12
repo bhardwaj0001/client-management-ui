@@ -1,0 +1,116 @@
+/* Color Variables */
+$bg-light: #f8f9fa;
+$bg-dark: #2e3944;
+$text-dark: #171717;
+$text-light: white;
+$primary: #04cba0;
+$hover-dark: #029c80;
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left Sidebar */
+.sidebar {
+  width: 20%;
+  background-color: rgba(46, 57, 68, 0.7);
+  color: $text-light;
+  padding: 20px;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
+
+/* Right Table Section */
+.mainContent {
+  width: 80%;
+  padding: 20px;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: $text-dark;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    thead {
+      background-color: #003d4f;
+      color: $text-light;
+
+      th {
+        padding: 12px;
+        text-align: left;
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid #ddd;
+
+        &:nth-child(even) {
+          background-color: #f4f4f4;
+        }
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+        }
+      }
+
+      td {
+        padding: 12px;
+        color: $text-dark;
+      }
+    }
+  }
+
+  .downloadBtn,
+  .viewBtn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .downloadBtn {
+    background-color: #003d4f;
+    color: white;
+
+    &:hover {
+      background-color: #003d4f;
+    }
+  }
+
+  .viewBtn {
+    background-color: #47a1ad;
+    color: white;
+
+    &:hover {
+      background-color: #47a1ad;
+    }
+  }
+}

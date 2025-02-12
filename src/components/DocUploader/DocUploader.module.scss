@@ -1,0 +1,101 @@
+// DocUploader.module.scss
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uploader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  padding: 3rem 3rem 5rem 3rem; // Added space to make it feel spacious
+  max-width: 620px;
+  width: 100%;
+  background-blend-mode: overlay; // Blending mode to enhance SVG visibility with the white background
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  label {
+    position: relative;
+    top: -8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #003d4f; // Elegant blue for labels
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #003d4f; // Darker blue when hovered
+    }
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .fileName {
+    position: absolute;
+    margin-top: 1.5rem;
+    color: #003d4f;
+    font-size: 1.2rem;
+    font-weight: 700;
+    top: 62px;
+    word-break: break-word; // To handle long file names elegantly
+  }
+
+  .message {
+    margin-top: 1.5rem;
+    color: #d9534f; // Red for error messages
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-align: center;
+
+    &.success {
+      color: #28a745; // Green for success messages
+    }
+  }
+  .enhancer {
+    color: #cc850a;
+  }
+  button {
+    margin-top: 2rem;
+    background-color: #f2617a;
+    color: #edf1f3;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.9rem 2.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #f2617a; // Darker blue when hovered
+      transform: scale(1.05); // Slightly increase size for interactivity
+    }
+
+    &:disabled {
+      color: #003d4f;
+      background-color: transparent;
+      // border: 1px solid #edf1f3;
+      cursor: not-allowed;
+      backdrop-filter: blur(6px); /* Creates a blurred effect */
+      -webkit-backdrop-filter: blur(6px);
+    }
+  }
+}
