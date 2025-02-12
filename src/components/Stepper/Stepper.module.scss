@@ -21,7 +21,8 @@
     transition: background 0.3s;
 
     &:disabled {
-      background: #ccc;
+      background: #edf1f3;
+      color: #124e66;
       cursor: not-allowed;
     }
 

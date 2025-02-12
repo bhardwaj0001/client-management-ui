@@ -21,9 +21,37 @@ export const CaseDetails = () => {
     const fetchCaseDetails = async () => {
       try {
         setIsLoading(true);
+        setCaseData({
+          caseId: "CASE779467",
+          caseCreationDate: "2025-02-12",
+          status: "NEW",
+          customerDetails: {
+            customerId: "7610928763699",
+            legalCompanyName: "AbcCorp Ltd.",
+            taxIdNumber: "878788899000",
+          },
+          customerPOCDetails: {
+            name: "Harry Potter",
+            identification: "9982109287",
+            idType: "Employee ID",
+            role: "Sr. Vendor Manager",
+          },
+          userDetails: {
+            name: "Mary Jane",
+            identification: "90908827161",
+            idType: "Aadhar card",
+          },
+          productDetails: {
+            productName: "Gold Travel Card",
+            productId: "8726189300276",
+            startDate: "10th Nov 2024",
+          },
+        });
+        setIsLoading(false);
         const response = await fetch(
           `${BASE_PATH}/client-servicing/v1/cases/${caseId}`
         );
+
         if (!response.ok) throw new Error("Failed to fetch case details");
 
         const data = await response.json();
