@@ -55,6 +55,9 @@ export const CaseDetailsForm = ({ caseData, isLoading }) => {
               {caseData.customerPOCDetails.identification}
             </p>
             <p>
+              <strong>ID Type:</strong> {caseData.customerPOCDetails.idType}
+            </p>
+            <p>
               <strong>Role:</strong> {caseData.customerPOCDetails.role}
             </p>
           </div>
@@ -70,6 +73,9 @@ export const CaseDetailsForm = ({ caseData, isLoading }) => {
             <p>
               <strong>Identification:</strong>{" "}
               {caseData.userDetails.identification}
+            </p>
+            <p>
+              <strong>ID Type:</strong> {caseData.userDetails.idType}
             </p>
           </div>
         </div>
