@@ -36,9 +36,11 @@ export const DocUploader = () => {
         body: formData,
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         setMessage("File uploaded successfully!");
-        setCaseId(response?.body?.caseId ?? response?.caseId);
+        setCaseId(data?.caseId);
       } else {
         setMessage("Upload failed. Please try again.");
       }
