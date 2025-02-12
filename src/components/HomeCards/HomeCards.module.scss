@@ -11,6 +11,7 @@
 }
 
 .card {
+  text-decoration: none;
   width: 48%;
   max-width: 340px;
   height: 420px;
@@ -37,8 +38,8 @@
   }
 
   &:hover {
-    background-color: #f6f6f6;
-    opacity: 0.9;
+    background-color: white;
+    opacity: 1;
     transform: scale(1.05);
   }
 }
@@ -60,8 +61,8 @@
 .cardLink {
   color: #212a31;
   text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   border: 2px solid #212a31;
   padding: 1rem;
   border-radius: 5px;

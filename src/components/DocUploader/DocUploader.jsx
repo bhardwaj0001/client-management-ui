@@ -58,7 +58,7 @@ export const DocUploader = () => {
         }}
       >
         <label htmlFor="file-upload">
-          Choose a <span className={styles.enhancer}>PDF</span> File
+          Upload <span className={styles.enhancer}>PDF</span> Request File
         </label>
         <input
           id="file-upload"

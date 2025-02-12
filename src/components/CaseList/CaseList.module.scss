@@ -114,3 +114,12 @@ $hover-dark: #029c80;
     }
   }
 }
+.emptyList {
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.emptyList td {
+  width: 100%;
+}

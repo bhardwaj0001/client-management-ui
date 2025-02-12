@@ -37,26 +37,32 @@ export const CaseList = ({ allCases }) => {
             </tr>
           </thead>
           <tbody>
-            {allCases?.map((item, index) => (
-              <tr key={index}>
-                <td>{item.caseId}</td>
-                <td>{item.legalCompanyName}</td>
-                <td>{item.productName}</td>
-                <td>{item.startDate}</td>
-                <td>{item.caseCreationDate}</td>
-                <td>
-                  <button className={styles.downloadBtn}>Download</button>
-                </td>
-                <td>
-                  <button
-                    className={styles.viewBtn}
-                    onClick={() => handleView(item.caseId)}
-                  >
-                    View
-                  </button>
-                </td>
+            {!!allCases?.length ? (
+              allCases?.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.caseId}</td>
+                  <td>{item.legalCompanyName}</td>
+                  <td>{item.productName}</td>
+                  <td>{item.startDate}</td>
+                  <td>{item.caseCreationDate}</td>
+                  <td>
+                    <button className={styles.downloadBtn}>Download</button>
+                  </td>
+                  <td>
+                    <button
+                      className={styles.viewBtn}
+                      onClick={() => handleView(item.caseId)}
+                    >
+                      View
+                    </button>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr className={styles.emptyList}>
+                <td colSpan={7}>No Case Found</td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

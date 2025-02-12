@@ -12,7 +12,7 @@ export const HomeCards = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className={styles.card}>
+      <Link to="/client" className={styles.card}>
         <h2>Client</h2>
         <div>
           <img src="/client-person-1.svg" alt="SVG Icon" />
@@ -21,8 +21,8 @@ export const HomeCards = () => {
         <Link to="/client" className={styles.cardLink}>
           Explore Client Area
         </Link>
-      </div>
-      <div className={styles.card}>
+      </Link>
+      <Link to="/ops" className={styles.card}>
         <h2>Operations</h2>
         <div>
           <img src="/ops-person-1.svg" alt="SVG Icon" />
@@ -30,7 +30,7 @@ export const HomeCards = () => {
         <Link to="/ops" className={styles.cardLink}>
           Explore Ops Area
         </Link>
-      </div>
+      </Link>
 
       {/* <div className={styles.spinnerCard}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">

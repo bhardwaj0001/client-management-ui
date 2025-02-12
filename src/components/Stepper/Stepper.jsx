@@ -5,11 +5,12 @@ import styles from "./Stepper.module.scss";
 export const VerticalStepper = ({ isLoading }) => {
   const [activeStep, setActiveStep] = useState(0);
   const [steps, setSteps] = useState([
-    { stepLabel: "New Case", completed: false },
+    { stepLabel: "New", completed: false },
     { stepLabel: "Draft", completed: false },
-    { stepLabel: "Completed", completed: false },
-    { stepLabel: "Pending Approval", completed: false },
+    { stepLabel: "Ready For Approval", completed: false },
     { stepLabel: "Approved", completed: false },
+    { stepLabel: "Delivered", completed: false },
+    { stepLabel: "Closed", completed: false },
   ]);
 
   if (isLoading) {
