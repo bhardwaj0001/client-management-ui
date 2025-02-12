@@ -29,7 +29,7 @@ export const DocUploader = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch(`${BASE_PATH}/upload`, {
+      const response = await fetch(`${BASE_PATH}/client-servicing/v1/upload`, {
         method: "POST",
         body: formData,
       });
